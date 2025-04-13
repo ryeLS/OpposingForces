@@ -10,8 +10,9 @@ namespace NodeCanvas.Tasks.Actions {
 		public NavMeshAgent navmeshAgent;
 		public BBParameter<GameObject> target;
 		public BBParameter<float> speedBonus;
+        //https://freesound.org/people/CJspellsfish/sounds/676401/ - get gem sound
 
-		protected override void OnExecute() {
+        protected override void OnExecute() {
 			
             navmeshAgent.SetDestination(target.value.transform.position);
             
@@ -28,8 +29,9 @@ namespace NodeCanvas.Tasks.Actions {
 				{
 					if(!navmeshAgent.hasPath || navmeshAgent.velocity.sqrMagnitude == 0)
 					{
-						EndAction(true);
+						EndAction(true); //if nav mesh agent is closs enough to target and magnitude = 0 end task and add speed
 						speedBonus.value++;
+						
 						Object.Destroy(target.value);
 					}
 				}

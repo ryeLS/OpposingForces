@@ -10,26 +10,28 @@ namespace NodeCanvas.Tasks.Actions {
         float maxTime = 0.7f;
         float speed = 4f;
         Vector3 prevPosition;
- 
+        //https://freesound.org/s/462958/ - jump sound
+
         protected override string OnInit() {
 			return null;
 		}
 
 	
 		protected override void OnExecute() {
-			prevPosition = agent.transform.position;
+			prevPosition = agent.transform.position; //store previous position to snap back to
 		}
 
-		//Called once per frame while the action is active.
+		
 		protected override void OnUpdate() {
             timer += Time.deltaTime;
-            if (timer <= maxTime)
+            if (timer <= maxTime) //timer so this action only occurs for a short time
             {//motion of jumping once
                 float yOffset = Mathf.Sin(timer * speed) * moveDistance;
                agent.transform.position = prevPosition + new Vector3(0, yOffset, 0);
             }
 			if(timer > maxTime)
 			{
+				timer = 0;//reset timer and end task
 				EndAction(true);
 			}
         }
