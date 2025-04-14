@@ -10,11 +10,15 @@ namespace NodeCanvas.Tasks.Actions {
 		public NavMeshAgent navmeshAgent;
 		public BBParameter<GameObject> target;
 		public BBParameter<float> speedBonus;
+        public AudioClip gemSound;
+        public AudioSource source;
         //https://freesound.org/people/CJspellsfish/sounds/676401/ - get gem sound
+        // https://freesound.org/people/AdminMP/sounds/383200/ - running away sound
 
         protected override void OnExecute() {
 			
             navmeshAgent.SetDestination(target.value.transform.position);
+            source = agent.GetComponent<AudioSource>();
             
         }
 
@@ -31,8 +35,9 @@ namespace NodeCanvas.Tasks.Actions {
 					{
 						EndAction(true); //if nav mesh agent is closs enough to target and magnitude = 0 end task and add speed
 						speedBonus.value++;
-						
-						Object.Destroy(target.value);
+
+                        source.PlayOneShot(gemSound);
+                        Object.Destroy(target.value);
 					}
 				}
 			}

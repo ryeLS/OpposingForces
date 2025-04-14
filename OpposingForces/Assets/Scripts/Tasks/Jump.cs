@@ -10,6 +10,8 @@ namespace NodeCanvas.Tasks.Actions {
         float maxTime = 0.7f;
         float speed = 4f;
         Vector3 prevPosition;
+        public AudioClip jumpSound;
+        public AudioSource source;
         //https://freesound.org/s/462958/ - jump sound
 
         protected override string OnInit() {
@@ -19,7 +21,9 @@ namespace NodeCanvas.Tasks.Actions {
 	
 		protected override void OnExecute() {
 			prevPosition = agent.transform.position; //store previous position to snap back to
-		}
+            source = agent.GetComponent<AudioSource>();
+            source.PlayOneShot(jumpSound);
+        }
 
 		
 		protected override void OnUpdate() {

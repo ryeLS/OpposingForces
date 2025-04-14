@@ -1174,37 +1174,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &403387863
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 403387864}
-  m_Layer: 0
-  m_Name: GameObject
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &403387864
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 403387863}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 10.77}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &498814827
 GameObject:
   m_ObjectHideFlags: 0
@@ -1217,6 +1186,7 @@ GameObject:
   - component: {fileID: 498814831}
   - component: {fileID: 498814830}
   - component: {fileID: 498814829}
+  - component: {fileID: 498814832}
   m_Layer: 0
   m_Name: Knight
   m_TagString: Untagged
@@ -1288,9 +1258,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _serializedExposedParameters: []
-  _boundGraphSerialization: '{"type":"NodeCanvas.BehaviourTrees.BehaviourTree","nodes":[{"_position":{"x":440.0,"y":156.0},"$type":"NodeCanvas.BehaviourTrees.Selector","$id":"0"},{"dynamic":true,"_position":{"x":303.8,"y":275.0},"$type":"NodeCanvas.BehaviourTrees.Sequencer","$id":"1"},{"_condition":{"playerTransform":{"_name":"Player","_targetVariableID":"533bcdb7-084f-44a5-8980-8261ce0eb89c"},"kingTransform":{"_name":"King","_targetVariableID":"4a1fba68-c771-40f6-b887-d9561c068afa"},"$type":"NodeCanvas.Tasks.Conditions.DistanceBetweenKing"},"_position":{"x":159.2,"y":366.4},"$type":"NodeCanvas.BehaviourTrees.ConditionNode","$id":"2"},{"_action":{"playerTransform":{"_name":"Player","_targetVariableID":"533bcdb7-084f-44a5-8980-8261ce0eb89c"},"kingTransform":{"_name":"King","_targetVariableID":"4a1fba68-c771-40f6-b887-d9561c068afa"},"$type":"NodeCanvas.Tasks.Actions.Defend"},"_position":{"x":397.4,"y":367.0},"$type":"NodeCanvas.BehaviourTrees.ActionNode","$id":"3"},{"_action":{"target":{"_value":1},"speed":{"_name":"Global/speed","_targetVariableID":"11f1fb0c-c223-4bf0-b15b-a84da442416e"},"keepDistance":{"_value":2.0},"$type":"NodeCanvas.Tasks.Actions.MoveToGameObject"},"_position":{"x":633.4,"y":341.4},"$type":"NodeCanvas.BehaviourTrees.ActionNode","$id":"4"}],"connections":[{"_sourceNode":{"$ref":"0"},"_targetNode":{"$ref":"1"},"$type":"NodeCanvas.BehaviourTrees.BTConnection"},{"_sourceNode":{"$ref":"0"},"_targetNode":{"$ref":"4"},"$type":"NodeCanvas.BehaviourTrees.BTConnection"},{"_sourceNode":{"$ref":"1"},"_targetNode":{"$ref":"2"},"$type":"NodeCanvas.BehaviourTrees.BTConnection"},{"_sourceNode":{"$ref":"1"},"_targetNode":{"$ref":"3"},"$type":"NodeCanvas.BehaviourTrees.BTConnection"}],"canvasGroups":[],"localBlackboard":{"_variables":{}},"derivedData":{"repeat":true,"$type":"NodeCanvas.BehaviourTrees.BehaviourTree+DerivedSerializationData"}}'
+  _boundGraphSerialization: '{"type":"NodeCanvas.BehaviourTrees.BehaviourTree","nodes":[{"_position":{"x":440.0,"y":156.0},"$type":"NodeCanvas.BehaviourTrees.Selector","$id":"0"},{"dynamic":true,"_position":{"x":303.8,"y":275.0},"$type":"NodeCanvas.BehaviourTrees.Sequencer","$id":"1"},{"_condition":{"playerTransform":{"_name":"Player","_targetVariableID":"533bcdb7-084f-44a5-8980-8261ce0eb89c"},"kingTransform":{"_name":"King","_targetVariableID":"4a1fba68-c771-40f6-b887-d9561c068afa"},"$type":"NodeCanvas.Tasks.Conditions.DistanceBetweenKing"},"_position":{"x":159.2,"y":366.4},"$type":"NodeCanvas.BehaviourTrees.ConditionNode","$id":"2"},{"_action":{"playerTransform":{"_name":"Player","_targetVariableID":"533bcdb7-084f-44a5-8980-8261ce0eb89c"},"kingTransform":{"_name":"King","_targetVariableID":"4a1fba68-c771-40f6-b887-d9561c068afa"},"defendSound":1,"$type":"NodeCanvas.Tasks.Actions.Defend"},"_position":{"x":397.4,"y":367.0},"$type":"NodeCanvas.BehaviourTrees.ActionNode","$id":"3"},{"_action":{"target":{"_value":2},"speed":{"_name":"Global/speed","_targetVariableID":"11f1fb0c-c223-4bf0-b15b-a84da442416e"},"keepDistance":{"_value":2.0},"$type":"NodeCanvas.Tasks.Actions.MoveToGameObject"},"_position":{"x":633.4,"y":341.4},"$type":"NodeCanvas.BehaviourTrees.ActionNode","$id":"4"}],"connections":[{"_sourceNode":{"$ref":"0"},"_targetNode":{"$ref":"1"},"$type":"NodeCanvas.BehaviourTrees.BTConnection"},{"_sourceNode":{"$ref":"0"},"_targetNode":{"$ref":"4"},"$type":"NodeCanvas.BehaviourTrees.BTConnection"},{"_sourceNode":{"$ref":"1"},"_targetNode":{"$ref":"2"},"$type":"NodeCanvas.BehaviourTrees.BTConnection"},{"_sourceNode":{"$ref":"1"},"_targetNode":{"$ref":"3"},"$type":"NodeCanvas.BehaviourTrees.BTConnection"}],"canvasGroups":[],"localBlackboard":{"_variables":{}},"derivedData":{"repeat":true,"$type":"NodeCanvas.BehaviourTrees.BehaviourTree+DerivedSerializationData"}}'
   _boundGraphObjectReferences:
   - {fileID: 0}
+  - {fileID: 8300000, guid: bfdb5dc34525cc349901d046ea9a438e, type: 3}
   - {fileID: 1157294436}
   _boundGraphSource:
     _version: 3.31
@@ -1328,6 +1299,102 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!82 &498814832
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 498814827}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &519406204
 GameObject:
   m_ObjectHideFlags: 0
@@ -2423,6 +2490,7 @@ GameObject:
   - component: {fileID: 1157294437}
   - component: {fileID: 1157294440}
   - component: {fileID: 1157294439}
+  - component: {fileID: 1157294441}
   m_Layer: 0
   m_Name: King
   m_TagString: Untagged
@@ -2530,16 +2598,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _serializedExposedParameters: []
-  _boundGraphSerialization: '{"type":"NodeCanvas.BehaviourTrees.BehaviourTree","nodes":[{"dynamic":true,"_position":{"x":389.6,"y":108.8},"$type":"NodeCanvas.BehaviourTrees.Selector","$id":"0"},{"_position":{"x":244.0,"y":233.6},"$type":"NodeCanvas.BehaviourTrees.Sequencer","$id":"1"},{"_condition":{"playerTransform":{"_name":"Player","_targetVariableID":"196392a5-77ab-4c99-9301-eae3199098d8"},"kingTransform":{"_name":"King","_targetVariableID":"e0050f7f-651b-4d04-8fc7-fefd555cd991"},"$type":"NodeCanvas.Tasks.Conditions.DistanceBetweenKing"},"_position":{"x":86.39999,"y":309.6},"$type":"NodeCanvas.BehaviourTrees.ConditionNode","$id":"2"},{"_action":{"target":{"_name":"Player","_targetVariableID":"196392a5-77ab-4c99-9301-eae3199098d8"},"speed":{"_name":"Global/speed","_targetVariableID":"11f1fb0c-c223-4bf0-b15b-a84da442416e"},"fledDistance":{"_value":10.0},"lookAhead":{"_value":2.0},"$type":"NodeCanvas.Tasks.Actions.Flee"},"_position":{"x":281.6,"y":319.2},"$type":"NodeCanvas.BehaviourTrees.ActionNode","$id":"3"},{"dynamic":true,"_condition":{"gemLayers":{"value":8},"closestGem":{"_name":"closestGem","_targetVariableID":"f483fd53-1bf5-4dee-be3f-655dcc5d3cef"},"$type":"NodeCanvas.Tasks.Actions.FindGems"},"_position":{"x":625.6,"y":197.6},"$type":"NodeCanvas.BehaviourTrees.BinarySelector","$id":"4"},{"_position":{"x":478.4001,"y":280.8},"$type":"NodeCanvas.BehaviourTrees.Sequencer","$id":"5"},{"_action":{"$type":"NodeCanvas.Tasks.Actions.Jump"},"_position":{"x":445.6,"y":359.2},"$type":"NodeCanvas.BehaviourTrees.ActionNode","$id":"6"},{"_action":{"navmeshAgent":1,"target":{"_name":"closestGem","_targetVariableID":"f483fd53-1bf5-4dee-be3f-655dcc5d3cef"},"speedBonus":{"_name":"Global/speed","_targetVariableID":"11f1fb0c-c223-4bf0-b15b-a84da442416e"},"$type":"NodeCanvas.Tasks.Actions.MoveToGem"},"_position":{"x":575.2,"y":363.2},"$type":"NodeCanvas.BehaviourTrees.ActionNode","$id":"7"},{"_action":{"speed":{"_name":"Global/speed","_targetVariableID":"11f1fb0c-c223-4bf0-b15b-a84da442416e"},"keepDistance":{"_value":0.1},"minWanderDistance":{"_value":5.0},"maxWanderDistance":{"_value":20.0},"$type":"NodeCanvas.Tasks.Actions.Wander"},"_position":{"x":740.8,"y":321.6},"$type":"NodeCanvas.BehaviourTrees.ActionNode","$id":"8"}],"connections":[{"_sourceNode":{"$ref":"0"},"_targetNode":{"$ref":"1"},"$type":"NodeCanvas.BehaviourTrees.BTConnection"},{"_sourceNode":{"$ref":"0"},"_targetNode":{"$ref":"4"},"$type":"NodeCanvas.BehaviourTrees.BTConnection"},{"_sourceNode":{"$ref":"1"},"_targetNode":{"$ref":"2"},"$type":"NodeCanvas.BehaviourTrees.BTConnection"},{"_sourceNode":{"$ref":"1"},"_targetNode":{"$ref":"3"},"$type":"NodeCanvas.BehaviourTrees.BTConnection"},{"_sourceNode":{"$ref":"4"},"_targetNode":{"$ref":"5"},"$type":"NodeCanvas.BehaviourTrees.BTConnection"},{"_sourceNode":{"$ref":"4"},"_targetNode":{"$ref":"8"},"$type":"NodeCanvas.BehaviourTrees.BTConnection"},{"_sourceNode":{"$ref":"5"},"_targetNode":{"$ref":"6"},"$type":"NodeCanvas.BehaviourTrees.BTConnection"},{"_sourceNode":{"$ref":"5"},"_targetNode":{"$ref":"7"},"$type":"NodeCanvas.BehaviourTrees.BTConnection"}],"canvasGroups":[],"localBlackboard":{"_variables":{}},"derivedData":{"repeat":true,"$type":"NodeCanvas.BehaviourTrees.BehaviourTree+DerivedSerializationData"}}'
+  _boundGraphSerialization: '{"type":"NodeCanvas.BehaviourTrees.BehaviourTree","nodes":[{"dynamic":true,"_position":{"x":389.6,"y":108.8},"$type":"NodeCanvas.BehaviourTrees.Selector","$id":"0"},{"_position":{"x":244.0,"y":233.6},"$type":"NodeCanvas.BehaviourTrees.Sequencer","$id":"1"},{"_condition":{"playerTransform":{"_name":"Player","_targetVariableID":"196392a5-77ab-4c99-9301-eae3199098d8"},"kingTransform":{"_name":"King","_targetVariableID":"e0050f7f-651b-4d04-8fc7-fefd555cd991"},"$type":"NodeCanvas.Tasks.Conditions.DistanceBetweenKing"},"_position":{"x":-36.8,"y":312.8},"$type":"NodeCanvas.BehaviourTrees.ConditionNode","$id":"2"},{"_position":{"x":314.4,"y":297.8},"$type":"NodeCanvas.BehaviourTrees.Parallel","$id":"3"},{"_action":{"target":{"_name":"Player","_targetVariableID":"196392a5-77ab-4c99-9301-eae3199098d8"},"speed":{"_name":"Global/speed","_targetVariableID":"11f1fb0c-c223-4bf0-b15b-a84da442416e"},"fledDistance":{"_value":10.0},"lookAhead":{"_value":2.0},"$type":"NodeCanvas.Tasks.Actions.Flee"},"_position":{"x":147.2,"y":365.6},"$type":"NodeCanvas.BehaviourTrees.ActionNode","$id":"4"},{"_action":{"audioClip":{"_value":1},"$type":"NodeCanvas.Tasks.Actions.PlayAudioAtPosition"},"_position":{"x":188.0,"y":454.2},"$type":"NodeCanvas.BehaviourTrees.ActionNode","$id":"5"},{"dynamic":true,"_condition":{"gemLayers":{"value":8},"closestGem":{"_name":"closestGem","_targetVariableID":"f483fd53-1bf5-4dee-be3f-655dcc5d3cef"},"$type":"NodeCanvas.Tasks.Actions.FindGems"},"_position":{"x":625.6,"y":197.6},"$type":"NodeCanvas.BehaviourTrees.BinarySelector","$id":"6"},{"_position":{"x":478.4001,"y":280.8},"$type":"NodeCanvas.BehaviourTrees.Sequencer","$id":"7"},{"_action":{"jumpSound":2,"$type":"NodeCanvas.Tasks.Actions.Jump"},"_position":{"x":445.6,"y":359.2},"$type":"NodeCanvas.BehaviourTrees.ActionNode","$id":"8"},{"_action":{"navmeshAgent":3,"target":{"_name":"closestGem","_targetVariableID":"f483fd53-1bf5-4dee-be3f-655dcc5d3cef"},"speedBonus":{"_name":"Global/speed","_targetVariableID":"11f1fb0c-c223-4bf0-b15b-a84da442416e"},"gemSound":4,"$type":"NodeCanvas.Tasks.Actions.MoveToGem"},"_position":{"x":575.2,"y":363.2},"$type":"NodeCanvas.BehaviourTrees.ActionNode","$id":"9"},{"_action":{"speed":{"_name":"Global/speed","_targetVariableID":"11f1fb0c-c223-4bf0-b15b-a84da442416e"},"keepDistance":{"_value":0.1},"minWanderDistance":{"_value":5.0},"maxWanderDistance":{"_value":20.0},"$type":"NodeCanvas.Tasks.Actions.Wander"},"_position":{"x":740.8,"y":321.6},"$type":"NodeCanvas.BehaviourTrees.ActionNode","$id":"10"}],"connections":[{"_sourceNode":{"$ref":"0"},"_targetNode":{"$ref":"1"},"$type":"NodeCanvas.BehaviourTrees.BTConnection"},{"_sourceNode":{"$ref":"0"},"_targetNode":{"$ref":"6"},"$type":"NodeCanvas.BehaviourTrees.BTConnection"},{"_sourceNode":{"$ref":"1"},"_targetNode":{"$ref":"2"},"$type":"NodeCanvas.BehaviourTrees.BTConnection"},{"_sourceNode":{"$ref":"1"},"_targetNode":{"$ref":"3"},"$type":"NodeCanvas.BehaviourTrees.BTConnection"},{"_sourceNode":{"$ref":"3"},"_targetNode":{"$ref":"4"},"$type":"NodeCanvas.BehaviourTrees.BTConnection"},{"_sourceNode":{"$ref":"3"},"_targetNode":{"$ref":"5"},"$type":"NodeCanvas.BehaviourTrees.BTConnection"},{"_sourceNode":{"$ref":"6"},"_targetNode":{"$ref":"7"},"$type":"NodeCanvas.BehaviourTrees.BTConnection"},{"_sourceNode":{"$ref":"6"},"_targetNode":{"$ref":"10"},"$type":"NodeCanvas.BehaviourTrees.BTConnection"},{"_sourceNode":{"$ref":"7"},"_targetNode":{"$ref":"8"},"$type":"NodeCanvas.BehaviourTrees.BTConnection"},{"_sourceNode":{"$ref":"7"},"_targetNode":{"$ref":"9"},"$type":"NodeCanvas.BehaviourTrees.BTConnection"}],"canvasGroups":[],"localBlackboard":{"_variables":{}},"derivedData":{"repeat":true,"$type":"NodeCanvas.BehaviourTrees.BehaviourTree+DerivedSerializationData"}}'
   _boundGraphObjectReferences:
   - {fileID: 0}
+  - {fileID: 8300000, guid: 1ef351fe80419c842a95221396dfa2be, type: 3}
+  - {fileID: 8300000, guid: f1953fbf6c921bd4f965ca9693c19664, type: 3}
   - {fileID: 1157294437}
+  - {fileID: 8300000, guid: 86e72ec27e893bb4f8b04553416e3e54, type: 3}
   _boundGraphSource:
     _version: 3.31
     _category: 
     _comments: 
-    _translation: {x: 4, y: 69}
-    _zoomFactor: 1
+    _translation: {x: 86, y: 80}
+    _zoomFactor: 0.9132603
   _firstActivation: 0
   _enableAction: 0
   _disableAction: 0
@@ -2548,6 +2619,102 @@ MonoBehaviour:
   _updateMode: 0
   _graph: {fileID: 0}
   _blackboard: {fileID: 1157294439}
+--- !u!82 &1157294441
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1157294436}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1167761385
 GameObject:
   m_ObjectHideFlags: 0
@@ -3864,6 +4031,7 @@ GameObject:
   - component: {fileID: 1894151549}
   - component: {fileID: 1894151553}
   - component: {fileID: 1894151554}
+  - component: {fileID: 1894151555}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -3914,7 +4082,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: c335943f9b06f54448c1e2566e84bd9e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3972,6 +4140,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3
+  gemSound: {fileID: 8300000, guid: 86e72ec27e893bb4f8b04553416e3e54, type: 3}
+  source: {fileID: 0}
 --- !u!54 &1894151554
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3999,6 +4169,102 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 80
   m_CollisionDetection: 0
+--- !u!82 &1894151555
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1894151548}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1916608562
 GameObject:
   m_ObjectHideFlags: 0
@@ -4808,7 +5074,6 @@ SceneRoots:
   - {fileID: 813595927}
   - {fileID: 1157294438}
   - {fileID: 1894151552}
-  - {fileID: 403387864}
   - {fileID: 306934414}
   - {fileID: 533161153}
   - {fileID: 1487359311}

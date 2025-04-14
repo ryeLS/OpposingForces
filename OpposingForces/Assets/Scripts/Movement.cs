@@ -6,12 +6,14 @@ public class Movement : MonoBehaviour
 {
     public float speed = 3;
     Rigidbody rb;
-
+    public AudioClip gemSound;
+    public AudioSource source;
 
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+        source = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -41,6 +43,7 @@ public class Movement : MonoBehaviour
     {
         if(collision.gameObject.layer == 3)
         {
+            source.PlayOneShot(gemSound);
             Destroy(collision.gameObject);
             speed += 1;
         }

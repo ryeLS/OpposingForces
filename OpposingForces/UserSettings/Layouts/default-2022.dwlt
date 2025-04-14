@@ -217,8 +217,8 @@ MonoBehaviour:
     y: 0
     width: 215.2
     height: 600
-  m_MinSize: {x: 201, y: 221}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 14}
   m_Panes:
   - {fileID: 14}
@@ -243,15 +243,15 @@ MonoBehaviour:
     y: 0
     width: 1012.8
     height: 600
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 202, y: 221}
+  m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 16}
   m_Panes:
   - {fileID: 15}
   - {fileID: 16}
   - {fileID: 13}
   m_Selected: 1
-  m_LastSelected: 2
+  m_LastSelected: 0
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -378,7 +378,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 6c36ffffce77ffff30fbffff185f0000
+      m_ExpandedIDs: 30fbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -745,9 +745,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -1.9566143, y: -0.68031937, z: 2.1434932}
+    m_Target: {x: -2.2466187, y: -1.2635862, z: -21.182465}
     speed: 2
-    m_Value: {x: -1.9566143, y: -0.68031937, z: 2.1434932}
+    m_Value: {x: -2.2466187, y: -1.2635862, z: -21.182465}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 2
@@ -793,13 +793,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: 0.11114986, y: -0.64501756, z: 0.095446885, w: 0.75022376}
+    m_Target: {x: 0.0038285938, y: -0.9963775, z: 0.05926274, w: 0.0637258}
     speed: 2
-    m_Value: {x: 0.11113055, y: -0.64490545, z: 0.0954303, w: 0.7500934}
+    m_Value: {x: 0.003827913, y: -0.9962003, z: 0.059252203, w: 0.06371447}
   m_Size:
-    m_Target: 10
+    m_Target: 16.958813
     speed: 2
-    m_Value: 10
+    m_Value: 16.228529
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -967,7 +967,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets
+    - Assets/materials
     m_Globs: []
     m_OriginalText: 
     m_ImportLogFlags: 0
@@ -975,16 +975,16 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 53
   m_LastFolders:
-  - Assets
+  - Assets/materials
   m_LastFoldersGridSize: 53
   m_LastProjectPath: C:\Users\dlues\Documents\OpposingForces\OpposingForces
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 79}
-    m_SelectedIDs: ec5f0000
-    m_LastClickedID: 24556
-    m_ExpandedIDs: 00000000ec5f0000f85f000000ca9a3bffffff7f
+    m_SelectedIDs: e0600000
+    m_LastClickedID: 24800
+    m_ExpandedIDs: 00000000da600000e660000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1012,7 +1012,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000ec5f0000
+    m_ExpandedIDs: 00000000da600000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 

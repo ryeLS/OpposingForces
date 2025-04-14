@@ -23,7 +23,7 @@ namespace NodeCanvas.Tasks.Conditions {
 		}
 
 		protected override bool OnCheck() { //checks if king is close enough to player
-			if (Vector3.Distance(kingTransform.value.position, playerTransform.value.position) <= 6) return true;
+			if (Vector3.Distance(kingTransform.value.position, playerTransform.value.position) <= 7) return true;
 			else return false;
 		}
 	}
